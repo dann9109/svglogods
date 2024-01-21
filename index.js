@@ -14,6 +14,11 @@ inquirer
             message: 'Enter some text:',
         },
         {
+            type: 'input',
+            name: 'textColor',
+            message: 'Enter a text color'
+        },
+        {
             type: 'list',
             name: 'shape',
             message: 'Select a shape:',
@@ -24,6 +29,7 @@ inquirer
         const userColor = answers.userColor;
         const userText = answers.userText;
         const shape = answers.shape;
+        const textColor = answers.textColor;
 
         let newshape;
 
@@ -43,11 +49,12 @@ inquirer
         console.log('Selected shape:', shape);
         console.log('User color:', userColor);
         console.log('User text:', userText);
+        console.log('Text color:', textColor);
         //<circle cx="50" cy="50" r="50" fill="${userColor}" /
         const svgContent = `<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
       >
       ${newshape.render()}
-      <text x="50%" y="50%" text-anchor="middle" alignment-baseline="middle">${userText}</text>
+      <text x="50%" y="50%" text-anchor="middle" alignment-baseline="middle" fill="${textColor}">${userText}</text>
     </svg>`;
 
         fs.writeFile('logo.svg', svgContent, (err) => {
