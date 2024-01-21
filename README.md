@@ -56,3 +56,5 @@ Contributions are welcome! If you have any suggestions or improvements, please s
 This project is licensed under the MIT License.
 
 [Link](https://dann9109.github.io/svglogods/)
+
+[Video Link](https://drive.google.com/file/d/156o-IYL-k9zRA19P0W_dCJilC0wAYSfD/view)
